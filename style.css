@@ -1,0 +1,138 @@
+*{
+margin: 0;
+padding: 0;
+font-family: serif;
+}
+@keyFrames adjustOpacity{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes headerLoad{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    } 
+}
+@keyframes textLoad{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    } 
+}
+.banner{
+   width: 100%;
+   height: 100vh;
+   overflow-x: hidden;
+   background-color: whitesmoke;
+   background-position: center;
+
+}
+.navbar{
+    width: 100%;
+    align-items:center;
+    justify-content: space-between;
+    position: fixed;
+}
+.logo{
+    width: auto;
+    margin: auto 48.5%;
+    align-items:center;
+    display:block;
+    cursor: pointer;
+}
+
+.headshot{
+    display: block;
+    width: 400px;
+    margin: 200px auto; /* we can change all of this stuff later*/
+    animation: 1.5s ease-out 0s 1 adjustOpacity;
+}
+
+.navbar ul li{
+    width: fit-content;
+    list-style: none;
+    display: inline-block;
+    margin: 0 9.95%;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(54, 113, 138);
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: rgba(54, 113, 138, 0.5);
+    position: absolute;
+    left: 0;
+    bottom: -5;
+    transition: 0.3s;
+
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content ::before{
+    opacity: 0;
+}
+.content{
+    width: 30%;
+    position: relative;
+    margin: auto 3%;
+    transform: translateY(-650px);
+    color: rgb(163, 131, 99);
+    text-decoration: none;
+}
+.content h1{
+    text-align: center;
+    font-size:xx-large;
+    animation: 2s ease-out 0s 1 headerLoad;
+}
+.content p{
+    text-align: left;
+    text-decoration: none;
+    font-size:  20px;
+    padding-left: 20px;
+    animation: 2.5s ease-out 0s 1 textLoad;
+}
+.connect{
+    width: 30%;
+    position: relative;
+    margin: -940px 3%;
+    transform: translateX(960px); 
+    color: rgb(163, 131, 99);
+    text-decoration: none;
+}
+.connect h1{
+    text-align: center;
+    font-size:xx-large;
+    animation: 2s ease-out 0s 1 headerLoad;
+}
+.linkedin{
+    margin-top: 50px;
+}
+.linkedin a{
+    list-style: none;
+    color: rgb(163, 131, 99);
+    text-decoration: none;
+    display: block;
+}
